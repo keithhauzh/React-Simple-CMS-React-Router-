@@ -42,26 +42,29 @@ function ManagePosts() {
                 <Badge label="Published" />
                 <td className="text-end">
                   <div className="buttons">
-                    <a
+                    <Button
                       onClick={() => {
                         navigate("../post");
                       }}
-                      target="_blank"
-                      className="btn btn-primary btn-sm me-2 disabled"
+                      margin="me-2"
+                      color="dark-blue"
+                      size="small"
                     >
                       <i className="bi bi-eye"></i>
-                    </a>
-                    <a
+                    </Button>
+                    <Button
                       onClick={() => {
-                        navigate("/manage-posts/edit");
+                        navigate("../manage-posts/edit");
                       }}
-                      className="btn btn-secondary btn-sm me-2"
+                      margin="me-2"
+                      color="yellow"
+                      size="small"
                     >
                       <i className="bi bi-pencil"></i>
-                    </a>
-                    <a href="#" className="btn btn-danger btn-sm">
+                    </Button>
+                    <Button href="#" margin="me-2" size="small" color="red">
                       <i className="bi bi-trash"></i>
-                    </a>
+                    </Button>
                   </div>
                 </td>
               </tr>
@@ -72,26 +75,29 @@ function ManagePosts() {
 
                 <td className="text-end">
                   <div className="buttons">
-                    <a
+                    <Button
                       onClick={() => {
                         navigate("../post");
                       }}
-                      target="_blank"
-                      className="btn btn-primary btn-sm me-2"
+                      margin="me-2"
+                      color="dark-blue"
+                      size="small"
                     >
                       <i className="bi bi-eye"></i>
-                    </a>
-                    <a
+                    </Button>
+                    <Button
                       onClick={() => {
-                        navigate("/manage-posts/edit");
+                        navigate("../manage-posts/edit");
                       }}
-                      className="btn btn-secondary btn-sm me-2"
+                      margin="me-2"
+                      color="yellow"
+                      size="small"
                     >
                       <i className="bi bi-pencil"></i>
-                    </a>
-                    <a href="#" className="btn btn-danger btn-sm">
+                    </Button>
+                    <Button href="#" margin="me-2" size="small" color="red">
                       <i className="bi bi-trash"></i>
-                    </a>
+                    </Button>
                   </div>
                 </td>
               </tr>
@@ -102,26 +108,29 @@ function ManagePosts() {
 
                 <td className="text-end">
                   <div className="buttons">
-                    <a
+                    <Button
                       onClick={() => {
                         navigate("../post");
                       }}
-                      target="_blank"
-                      className="btn btn-primary btn-sm me-2"
+                      margin="me-2"
+                      color="dark-blue"
+                      size="small"
                     >
                       <i className="bi bi-eye"></i>
-                    </a>
-                    <a
+                    </Button>
+                    <Button
                       onClick={() => {
-                        navigate("/manage-posts/edit");
+                        navigate("../manage-posts/edit");
                       }}
-                      className="btn btn-secondary btn-sm me-2"
+                      margin="me-2"
+                      color="yellow"
+                      size="small"
                     >
                       <i className="bi bi-pencil"></i>
-                    </a>
-                    <a href="#" className="btn btn-danger btn-sm">
+                    </Button>
+                    <Button href="#" margin="me-2" size="small" color="red">
                       <i className="bi bi-trash"></i>
-                    </a>
+                    </Button>
                   </div>
                 </td>
               </tr>
@@ -132,26 +141,29 @@ function ManagePosts() {
 
                 <td className="text-end">
                   <div className="buttons">
-                    <a
+                    <Button
                       onClick={() => {
                         navigate("../post");
                       }}
-                      target="_blank"
-                      className="btn btn-primary btn-sm me-2"
+                      margin="me-2"
+                      color="dark-blue"
+                      size="small"
                     >
                       <i className="bi bi-eye"></i>
-                    </a>
-                    <a
+                    </Button>
+                    <Button
                       onClick={() => {
-                        navigate("/manage-posts/edit");
+                        navigate("../manage-posts/edit");
                       }}
-                      className="btn btn-secondary btn-sm me-2"
+                      margin="me-2"
+                      color="yellow"
+                      size="small"
                     >
                       <i className="bi bi-pencil"></i>
-                    </a>
-                    <a href="#" className="btn btn-danger btn-sm">
+                    </Button>
+                    <Button href="#" margin="me-2" size="small" color="red">
                       <i className="bi bi-trash"></i>
-                    </a>
+                    </Button>
                   </div>
                 </td>
               </tr>
@@ -162,26 +174,29 @@ function ManagePosts() {
 
                 <td className="text-end">
                   <div className="buttons">
-                    <a
+                    <Button
                       onClick={() => {
                         navigate("../post");
                       }}
-                      target="_blank"
-                      className="btn btn-primary btn-sm me-2"
+                      margin="me-2"
+                      color="dark-blue"
+                      size="small"
                     >
                       <i className="bi bi-eye"></i>
-                    </a>
-                    <a
+                    </Button>
+                    <Button
                       onClick={() => {
-                        navigate("/manage-posts/edit");
+                        navigate("../manage-posts/edit");
                       }}
-                      className="btn btn-secondary btn-sm me-2"
+                      margin="me-2"
+                      color="yellow"
+                      size="small"
                     >
                       <i className="bi bi-pencil"></i>
-                    </a>
-                    <a href="#" className="btn btn-danger btn-sm">
+                    </Button>
+                    <Button href="#" margin="me-2" size="small" color="red">
                       <i className="bi bi-trash"></i>
-                    </a>
+                    </Button>
                   </div>
                 </td>
               </tr>

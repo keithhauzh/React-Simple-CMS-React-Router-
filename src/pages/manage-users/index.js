@@ -6,7 +6,6 @@ function ManageUsers() {
   const navigate = useNavigate();
   return (
     <div>
-      
       <div className="container mx-auto my-5" style={{ maxWidth: "700px" }}>
         <div className="d-flex justify-content-between align-items-center mb-2">
           <h1 className="h1">Manage Users</h1>
@@ -44,25 +43,29 @@ function ManageUsers() {
                 </td>
                 <td className="text-end">
                   <div className="buttons">
-                    <a
+                    <Button
                       onClick={() => {
                         navigate("./edit");
                       }}
-                      className="btn btn-success btn-sm me-2"
+                      size="small"
+                      color="green"
+                      margin="me-2"
                     >
                       <i className="bi bi-pencil"></i>
-                    </a>
-                    <a
+                    </Button>
+                    <Button
                       onClick={() => {
                         navigate("./change-password");
                       }}
-                      className="btn btn-warning btn-sm me-2"
+                      size="small"
+                      color="yellow"
+                      margin="me-2"
                     >
                       <i className="bi bi-key"></i>
-                    </a>
-                    <a href="#" className="btn btn-danger btn-sm">
+                    </Button>
+                    <Button href="#" size="small" color="red" margin="me-2">
                       <i className="bi bi-trash"></i>
-                    </a>
+                    </Button>
                   </div>
                 </td>
               </tr>
@@ -75,25 +78,29 @@ function ManageUsers() {
                 </td>
                 <td className="text-end">
                   <div className="buttons">
-                    <a
+                    <Button
                       onClick={() => {
                         navigate("./edit");
                       }}
-                      className="btn btn-success btn-sm me-2"
+                      size="small"
+                      color="green"
+                      margin="me-2"
                     >
                       <i className="bi bi-pencil"></i>
-                    </a>
-                    <a
+                    </Button>
+                    <Button
                       onClick={() => {
                         navigate("./change-password");
                       }}
-                      className="btn btn-warning btn-sm me-2"
+                      size="small"
+                      color="yellow"
+                      margin="me-2"
                     >
                       <i className="bi bi-key"></i>
-                    </a>
-                    <a href="#" className="btn btn-danger btn-sm">
+                    </Button>
+                    <Button href="#" size="small" color="red" margin="me-2">
                       <i className="bi bi-trash"></i>
-                    </a>
+                    </Button>
                   </div>
                 </td>
               </tr>
@@ -106,25 +113,29 @@ function ManageUsers() {
                 </td>
                 <td className="text-end">
                   <div className="buttons">
-                    <a
+                    <Button
                       onClick={() => {
                         navigate("./edit");
                       }}
-                      className="btn btn-success btn-sm me-2"
+                      size="small"
+                      color="green"
+                      margin="me-2"
                     >
                       <i className="bi bi-pencil"></i>
-                    </a>
-                    <a
+                    </Button>
+                    <Button
                       onClick={() => {
                         navigate("./change-password");
                       }}
-                      className="btn btn-warning btn-sm me-2"
+                      size="small"
+                      color="yellow"
+                      margin="me-2"
                     >
                       <i className="bi bi-key"></i>
-                    </a>
-                    <a href="#" className="btn btn-danger btn-sm">
+                    </Button>
+                    <Button href="#" size="small" color="red" margin="me-2">
                       <i className="bi bi-trash"></i>
-                    </a>
+                    </Button>
                   </div>
                 </td>
               </tr>
