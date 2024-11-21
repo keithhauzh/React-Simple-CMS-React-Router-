@@ -1,10 +1,24 @@
-import Nav from "../../components/nav";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Badge from "../../components/badge";
 import Button from "../../components/button";
 
 function ManagePosts() {
   const navigate = useNavigate();
+  /*
+    1. [x] load the data from the local storage
+  */
+  const posts = [
+    {
+      id: 5,
+      title: "Post 5",
+      content: "content",
+      status: "pending",
+    },
+    { id: 4, title: "Post 4", content: "content", status: "pending" },
+    { id: 3, title: "Post 3", content: "content", status: "publish" },
+    { id: 2, title: "Post 2", content: "content", status: "publish" },
+    { id: 1, title: "Post 1", content: "content", status: "publish" },
+  ];
   return (
     <div>
       <div className="container mx-auto my-5" style={{ maxWidth: "700px" }}>
@@ -24,191 +38,52 @@ function ManagePosts() {
         <div className="card mb-2 p-4">
           <table className="table">
             <thead>
-              <tr>
-                <th scope="col">ID</th>
-                <th scope="col" style={{ width: "40%" }}>
-                  Title
-                </th>
-                <th scope="col">Status</th>
-                <th scope="col" className="text-end">
-                  Actions
-                </th>
-              </tr>
+              {posts.map((post) => (
+                <tr>
+                  <th scope="row">{post.id}</th>
+
+                  <td>{post.title}</td>
+
+                  <td>
+                    {post.status === "publish" ? (
+                      <Badge color="green">{post.status}</Badge>
+                    ) : (
+                      <Badge color="yellow">{post.status}</Badge>
+                    )}
+                  </td>
+
+                  <td className="text-end">
+                    <div className="buttons d-flex justify-content-end gap-2">
+                      <a
+                        href="/post"
+                        target="_blank"
+                        className="btn btn-primary btn-sm"
+                      >
+                        <i className="bi bi-eye"></i>
+                      </a>
+                      <Button
+                        color="yellow"
+                        size="small"
+                        onClick={() => {
+                          navigate("/manage-posts/edit");
+                        }}
+                      >
+                        <i className="bi bi-pencil"></i>
+                      </Button>
+                      <Button color="red" size="small" onClick={() => {}}>
+                        <i className="bi bi-trash"></i>
+                      </Button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row">5</th>
-                <td>Post 5</td>
-                <Badge label="Published" />
-                <td className="text-end">
-                  <div className="buttons">
-                    <Button
-                      onClick={() => {
-                        navigate("../post");
-                      }}
-                      margin="me-2"
-                      color="dark-blue"
-                      size="small"
-                    >
-                      <i className="bi bi-eye"></i>
-                    </Button>
-                    <Button
-                      onClick={() => {
-                        navigate("../manage-posts/edit");
-                      }}
-                      margin="me-2"
-                      color="yellow"
-                      size="small"
-                    >
-                      <i className="bi bi-pencil"></i>
-                    </Button>
-                    <Button href="#" margin="me-2" size="small" color="red">
-                      <i className="bi bi-trash"></i>
-                    </Button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Post 4</td>
-                <Badge label="Published" />
-
-                <td className="text-end">
-                  <div className="buttons">
-                    <Button
-                      onClick={() => {
-                        navigate("../post");
-                      }}
-                      margin="me-2"
-                      color="dark-blue"
-                      size="small"
-                    >
-                      <i className="bi bi-eye"></i>
-                    </Button>
-                    <Button
-                      onClick={() => {
-                        navigate("../manage-posts/edit");
-                      }}
-                      margin="me-2"
-                      color="yellow"
-                      size="small"
-                    >
-                      <i className="bi bi-pencil"></i>
-                    </Button>
-                    <Button href="#" margin="me-2" size="small" color="red">
-                      <i className="bi bi-trash"></i>
-                    </Button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Post 3</td>
-                <Badge label="Published" />
-
-                <td className="text-end">
-                  <div className="buttons">
-                    <a
-                      href="/post"
-                      target="_blank"
-                      className="btn btn-sm btn-primary me-2"
-                    >
-                      <i className="bi bi-eye"></i>
-                    </a>
-                    <Button
-                      onClick={() => {
-                        navigate("../manage-posts/edit");
-                      }}
-                      margin="me-2"
-                      color="yellow"
-                      size="small"
-                    >
-                      <i className="bi bi-pencil"></i>
-                    </Button>
-                    <Button href="#" margin="me-2" size="small" color="red">
-                      <i className="bi bi-trash"></i>
-                    </Button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Post 2</td>
-                <Badge label="Pending Review" />
-
-                <td className="text-end">
-                  <div className="buttons">
-                    <Button
-                      onClick={() => {
-                        navigate("../post");
-                      }}
-                      margin="me-2"
-                      color="dark-blue"
-                      size="small"
-                    >
-                      <i className="bi bi-eye"></i>
-                    </Button>
-                    <Button
-                      onClick={() => {
-                        navigate("../manage-posts/edit");
-                      }}
-                      margin="me-2"
-                      color="yellow"
-                      size="small"
-                    >
-                      <i className="bi bi-pencil"></i>
-                    </Button>
-                    <Button href="#" margin="me-2" size="small" color="red">
-                      <i className="bi bi-trash"></i>
-                    </Button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Post 1</td>
-                <Badge label="Published" />
-
-                <td className="text-end">
-                  <div className="buttons">
-                    <Button
-                      onClick={() => {
-                        navigate("../post");
-                      }}
-                      margin="me-2"
-                      color="dark-blue"
-                      size="small"
-                    >
-                      <i className="bi bi-eye"></i>
-                    </Button>
-                    <Button
-                      onClick={() => {
-                        navigate("../manage-posts/edit");
-                      }}
-                      margin="me-2"
-                      color="yellow"
-                      size="small"
-                    >
-                      <i className="bi bi-pencil"></i>
-                    </Button>
-                    <Button href="#" margin="me-2" size="small" color="red">
-                      <i className="bi bi-trash"></i>
-                    </Button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
           </table>
         </div>
         <div className="text-center">
-          <p
-            onClick={() => {
-              navigate("../dashboard");
-            }}
-            className="btn btn-link btn-sm text-primary"
-          >
+          <Link to="/dashboard" className="btn btn-link btn-sm">
             <i className="bi bi-arrow-left"></i> Back to Dashboard
-          </p>
+          </Link>
         </div>
       </div>
     </div>

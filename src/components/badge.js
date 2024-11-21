@@ -1,17 +1,13 @@
 function Badge(props) {
-  const { label } = props;
+  const { children } = props;
   let badgeClass = "badge ";
-  if (label === "Published") {
+  if (children === "publish") {
     badgeClass += "bg-success";
-  } else if (label === "Pending Review") {
+  } else if (children === "pending") {
     badgeClass += "bg-warning";
   }
 
-  return (
-    <td>
-      <span className={badgeClass}>{label}</span>
-    </td>
-  );
+  return <span className={badgeClass}>{children}</span>;
 }
 
 export default Badge;
