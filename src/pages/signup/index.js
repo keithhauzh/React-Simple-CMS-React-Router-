@@ -1,12 +1,10 @@
-import Nav from "../../components/nav";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/button";
 
 function Signup() {
   const navigate = useNavigate();
   return (
     <div>
-      
       <div className="container my-5 mx-auto" style={{ maxWidth: "500px" }}>
         <h1 className="h1 mb-4 text-center">Sign Up a New Account</h1>
 
@@ -71,23 +69,13 @@ function Signup() {
 
         {/* <!-- links --> */}
         <div className="d-flex justify-content-between align-items-center gap-3 mx-auto pt-3 text-primary">
-          <p
-            onClick={() => {
-              navigate("../dashboard");
-            }}
-            className="text-decoration-none small"
-          >
-            <i className="bi bi-arrow-left-circle"></i> Go back
-          </p>
-          <p
-            onClick={() => {
-              navigate("../login");
-            }}
-            className="text-decoration-none small"
-          >
-            Already have an account? Login here
+          <Link to="/">
+            <i className="bi bi-arrow-left"></i> Back
+          </Link>
+          <Link to="../login">
+            Don't Have an Account? Signup Here{" "}
             <i className="bi bi-arrow-right-circle"></i>
-          </p>
+          </Link>
         </div>
       </div>
     </div>
