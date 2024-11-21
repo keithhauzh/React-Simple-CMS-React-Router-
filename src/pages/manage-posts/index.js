@@ -108,16 +108,13 @@ function ManagePosts() {
 
                 <td className="text-end">
                   <div className="buttons">
-                    <Button
-                      onClick={() => {
-                        navigate("../post");
-                      }}
-                      margin="me-2"
-                      color="dark-blue"
-                      size="small"
+                    <a
+                      href="/post"
+                      target="_blank"
+                      className="btn btn-sm btn-primary me-2"
                     >
                       <i className="bi bi-eye"></i>
-                    </Button>
+                    </a>
                     <Button
                       onClick={() => {
                         navigate("../manage-posts/edit");
